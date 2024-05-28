@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar.js';
 import News from './components/News';
 import {
-  BrowserRouter ,
+  HashRouter ,
   Routes,
   Route,
 } from "react-router-dom";
@@ -11,7 +11,7 @@ export default class App extends Component{
  render(){
     return (
       <div>
-        <BrowserRouter basename='/News'>
+        <HashRouter>
           <Navbar />
           
           <Routes>
@@ -23,7 +23,7 @@ export default class App extends Component{
             <Route path='/sports'  element={<News key='sports'  pageSize={5} country='in' category='sports' />}></Route>
             <Route path='/technology'  element={<News key='technology'  pageSize={5} country='in' category='technology' />}></Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     )
   
