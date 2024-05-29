@@ -29,7 +29,7 @@ export default class News extends Component {
     this.setState({loading:true});
     fetch(url).then((res)=>{
         res.json().then((result)=>{
-            console.log(result.articles)
+           // console.log(result.articles)
         
             this.setState({
               data:result.articles,
@@ -47,7 +47,7 @@ handlePrevClick = async ()=>{
   this.setState({loading:true});
    fetch(url).then((res)=>{
     res.json().then((result)=>{
-        console.log(result.articles)
+      //  console.log(result.articles)
       
         this.setState({
           page: this.state.page - 1,
@@ -71,7 +71,7 @@ handlePrevClick = async ()=>{
         fetch(url).then((res)=>{
           res.json().then((result)=>{
             
-              console.log(result.articles)
+           //   console.log(result.articles)
              
               this.setState({
                 page: this.state.page + 1,
